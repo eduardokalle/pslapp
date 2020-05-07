@@ -20,7 +20,7 @@ export default function Home() {
 					</View>
 					<View style={styles.vbtn}>
             <Icon.Button name="cc-mastercard" onPress={() => {
-								Linking.openURL('https://wa.me/573124796067');
+								Linking.openURL('');
 							}} solid>
               Pagos en linea 
             </Icon.Button>

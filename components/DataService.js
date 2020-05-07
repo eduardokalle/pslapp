@@ -7,7 +7,7 @@ import { Text,
           } from 'react-native';
 
 
-export default function Home2( { navigation } ) {
+export default function DataService( { navigation } ) {
   return (
     <>
     

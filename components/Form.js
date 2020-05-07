@@ -74,7 +74,6 @@ const styles = StyleSheet.create({
         color : '#fff',
         //marginLeft: '5%',
     },
-
     reform: {
         top: 70,
         flex: 1,
