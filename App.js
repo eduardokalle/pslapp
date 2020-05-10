@@ -1,8 +1,9 @@
 import * as React from 'react';
-import { Text, View, StyleSheet, Button, Alert , Link, Image } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import Home from './components/Home';
 import Form from './components/Form';
 import Services from './components/Services';
+import WorkWithUs from './components/WorkWithUs';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
 
@@ -17,6 +18,7 @@ export default function App() {
               <Drawer.Screen name="Home" component={Home} />
               <Drawer.Screen name="Servicios" component={Services} />
               <Drawer.Screen name="Contacto" component={Form} />
+              <Drawer.Screen name="Trabaja con Nosotros" component={WorkWithUs} />
            </Drawer.Navigator>
          </NavigationContainer>
         </View>

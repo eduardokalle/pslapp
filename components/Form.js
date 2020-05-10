@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { FormLabel, FormInput, FormValidationMessage } from 'react-native-elements'
 import { Text, 
          View, 
          StyleSheet,  
@@ -10,23 +9,26 @@ import { Text,
 
 export default function  Form () {
 
-    
+    /*
     createAlert = () =>
-       Alert.alert(
-            "Te informamos",
-            "Que tu registro fue enviado",
-            [
-            {
-                text: "Cancel",
-                onPress: () => console.log("Cancel Pressed"),
-                style: "cancel"
-            },
-            { text: "OK", onPress: () => console.log("OK Pressed") }
-            ],
-            { cancelable: false }
+    
+        Alert.alert(
+                "Te informamos",
+                "Que tu registro fue enviado",
+                [
+                {
+                    text: "Cancel",
+                    onPress: () => console.log("Cancel Pressed"),
+                    style: "cancel"
+                },
+                { text: "OK", onPress: () => console.log("OK Pressed") }
+                ],
+                { cancelable: false }
 
-           
-        );
+            
+                ingresra en el button
+                this.createAlert
+        );*/
     
 
        return(
@@ -34,7 +36,7 @@ export default function  Form () {
                 <View style={ styles.vreform }> 
                     <View style={ styles.reform }>
                         <Text style={ styles.header}> 
-                            Registro
+                            Contacta con Nosotros
                         </Text>
                         <TextInput style = {styles.textinputF} placeholder='Tu Nombre'
                                 placeholderTextColor = "#fff"
@@ -54,10 +56,16 @@ export default function  Form () {
                                 placeholderTextColor = "#fff"
                                 secureTextEntry={false}  underlineColorAndroid={'transparent'}
                         /> 
+                         <TextInput  style = {styles.textinputT} placeholder='Mensaje'
+                                multiline={true}
+                                numberOfLines={3}
+                                placeholderTextColor = "#fff"
+                                underlineColorAndroid={'transparent'}
+                        /> 
                         <View style={ styles.button }>
                             <Button 
                                 title="     Enviar      "
-                                onPress={this.createAlert}
+                                onPress={""}
                             />
                         </View> 
                     </View>
@@ -91,7 +99,8 @@ const styles = StyleSheet.create({
         borderBottomColor:'#36E8C0',
         borderBottomWidth:1,
         marginLeft: '10%',
-        marginRight : '10%'
+        marginRight : '10%',
+        alignSelf: "center",
     },
     textinputF :{
         alignSelf :'stretch',
@@ -103,16 +112,28 @@ const styles = StyleSheet.create({
         backgroundColor: '#013862',
         marginLeft: '10%',
         marginRight : '10%'
-        
-    
+    },
+    textinputT :{
+        alignSelf :'stretch',
+        color: '#fff',
+        height:60,
+        marginBottom:60,
+        borderBottomColor:'#fff',
+        borderBottomWidth:1,
+        backgroundColor: '#013862',
+        marginLeft: '10%',
+        marginRight : '10%'
     },
     button:{
-        alignSelf :'center',
+       // alignSelf :'center',
+        alignSelf :'flex-end',
         alignItems: 'center',
         padding: 0,
         backgroundColor:'#59cbbd',
-        paddingRight:0,
+        paddingRight: 0,
         marginBottom: 180,
+        marginRight :'10%'
+        
         
     },
      textb:{

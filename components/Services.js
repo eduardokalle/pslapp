@@ -25,7 +25,7 @@ function Services(props) {
             <View style={styles.button2Row}>
             <TouchableOpacity style={styles.button2}>
                 <ImageBackground
-                source={require("../assets/odontologia.png")}
+                source={require("../assets/images/odontologia.png")}
                 resizeMode="cover"
                 style={styles.image}
                 imageStyle={styles.image_imageStyle}
@@ -40,7 +40,7 @@ function Services(props) {
             <TouchableOpacity style={styles.button3}>
                 <View style={styles.image2Stack}>
                 <Image
-                    source={require("../assets/pediatria.png")}
+                    source={require("../assets/images/pediatria.png")}
                     resizeMode="cover"
                     style={styles.image2}
                 ></Image>
@@ -53,7 +53,7 @@ function Services(props) {
             <View style={styles.button4Row}>
             <TouchableOpacity style={styles.button4}>
                 <ImageBackground
-                source={require("../assets/fisioterapia.png")}
+                source={require("../assets/images/fisioterapia.png")}
                 resizeMode="cover"
                 style={styles.image3}
                 imageStyle={styles.image3_imageStyle}
@@ -67,7 +67,7 @@ function Services(props) {
             <View style={styles.button4Filler}></View>
             <TouchableOpacity style={styles.button5}>
                 <ImageBackground
-                source={require("../assets/medicina.png")}
+                source={require("../assets/images/medicina.png")}
                 resizeMode="cover"
                 style={styles.image4}
                 imageStyle={styles.image4_imageStyle}
@@ -84,7 +84,7 @@ function Services(props) {
         <View style={styles.button7Row}>
             <TouchableOpacity style={styles.button7}>
             <ImageBackground
-                source={require("../assets/psicologia.png")}
+                source={require("../assets/images/psicologia.png")}
                 resizeMode="cover"
                 style={styles.image22}
                 imageStyle={styles.image22_imageStyle}
@@ -98,7 +98,7 @@ function Services(props) {
             <View style={styles.button7Filler}></View>
             <TouchableOpacity style={styles.button6}>
             <ImageBackground
-                source={require("../assets/enfermeria.png")}
+                source={require("../assets/images/enfermeria.png")}
                 resizeMode="cover"
                 style={styles.image32}
                 imageStyle={styles.image32_imageStyle}
@@ -139,7 +139,7 @@ const styles = StyleSheet.create({
         color : '#fff',
         paddingLeft: 0,
         paddingRight:0,
-        borderColor: 'red'
+        //borderColor: 'red'
     },    
 
 //container1
