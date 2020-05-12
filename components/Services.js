@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import Social from './Social';
+
 import {
   StyleSheet,
   View,
@@ -10,17 +12,16 @@ import {
 
 function Services(props) {
   return (
-
-    <View style={styles.container}>  
-        <View style={styles.vheader}>
-          <Text style={styles.textc}>Clinic Health PSL</Text>
+   <>
+    <View style={styles.vheader}>   
         </View> 
+     <Social/> 
+      <View style={styles.container}> 
         <View style={styles.container1}>
-            <TouchableOpacity style={styles.following}>
-               <Text style={styles.text}>Servicios</Text>  
-            </TouchableOpacity>
+               <Text style={styles.textc}>Clinic Health PSL Servicios</Text>  
         </View>
-        <View style={styles.container2}>
+      </View>   
+      <View style={styles.container2}>
         <View style={styles.button2RowColumn}>
             <View style={styles.button2Row}>
             <TouchableOpacity style={styles.button2}>
@@ -110,31 +111,30 @@ function Services(props) {
             </ImageBackground>
             </TouchableOpacity>
         </View>
-        </View>
-    </View>    
-   
+        </View> 
+   </>
   );
 }
 
 const styles = StyleSheet.create({
     container: {
-		flex: 1,
-        flexDirection: 'column',
+		    flex: 1,
         alignSelf :'stretch',
+        
     },
     textc: {
         color: "white",
         alignSelf: "center",
-        justifyContent: 'flex-end',
+        justifyContent: 'center',
         fontWeight: 'bold',
         fontSize:20,
-        position: 'relative',
-		bottom: -50,
+        //position: 'relative',
+		   // bottom: -50,
     },
 
     vheader : {
         width: 'auto',
-        height: 90,
+        height: 60,
         backgroundColor : '#007aff',
         color : '#fff',
         paddingLeft: 0,
@@ -206,7 +206,7 @@ const styles = StyleSheet.create({
 //container
   container2: {
     width: 'auto',
-    height: 580,
+    height: 600,
     backgroundColor: "white",
     paddingLeft: 0,
     paddingRight:0,
@@ -408,7 +408,7 @@ const styles = StyleSheet.create({
   button7Row: {
     height: 150,
     flexDirection: "row",
-    marginBottom: 30,
+    marginBottom: 50,
     marginLeft: 25,
     marginRight: 25
   }

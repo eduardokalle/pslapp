@@ -27,7 +27,8 @@ export default function  Form () {
 
             
                 ingresra en el button
-                this.createAlert
+                onPress={this.createAlert}
+                
         );*/
     
 
@@ -65,7 +66,7 @@ export default function  Form () {
                         <View style={ styles.button }>
                             <Button 
                                 title="     Enviar      "
-                                onPress={""}
+                            
                             />
                         </View> 
                     </View>
