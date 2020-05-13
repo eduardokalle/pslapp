@@ -112,7 +112,8 @@ const styles = StyleSheet.create({
         borderBottomWidth:1,
         backgroundColor: '#013862',
         marginLeft: '10%',
-        marginRight : '10%'
+        marginRight : '10%',
+        flex: -15,
     },
     textinputT :{
         alignSelf :'stretch',
@@ -123,7 +124,8 @@ const styles = StyleSheet.create({
         borderBottomWidth:1,
         backgroundColor: '#013862',
         marginLeft: '10%',
-        marginRight : '10%'
+        marginRight : '10%',
+        flex: -15,
     },
     button:{
        // alignSelf :'center',

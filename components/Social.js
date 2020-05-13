@@ -18,17 +18,38 @@ const Social = () => {
 						<Icon.Button name="facebook" onPress={() => {
 							Linking.openURL('https://www.facebook.com');
 							}} solid>
-                                Facebook
+                                
                         </Icon.Button>
                         </View>
                 <View style={styles.vwBtns2}>
                         <Icon.Button 
+                        
                         color='#fff'
                         backgroundColor= "#e4405f"
                         name="instagram" onPress={() => {
 							Linking.openURL('https://www.facebook.com');
 							}} solid>
-                                Instagram
+                                
+                        </Icon.Button>
+				</View>
+                <View style={styles.vwBtns3}>
+                        <Icon.Button 
+                        color='#fff'
+                        backgroundColor= "#00acee"
+                        name="twitter" onPress={() => {
+							Linking.openURL('https://www.facebook.com');
+							}} solid>
+                                
+                        </Icon.Button>
+				</View>
+                <View style={styles.vwBtns4}>
+                        <Icon.Button 
+                        color='#fff'
+                        backgroundColor= "#0072b1"
+                        name="linkedin" onPress={() => {
+							Linking.openURL('https://www.facebook.com');
+							}} solid>
+                                
                         </Icon.Button>
 				</View>
           </View>
@@ -58,20 +79,37 @@ const styles = StyleSheet.create({
     },
     vwBtns1: {
 		alignItems: 'center',
-		justifyContent: 'flex-end',
+		justifyContent: 'center',
 		flexDirection: 'row',
 		position: 'absolute',
         top: 10,
-        marginLeft: '13%'
+        marginLeft: '18%'
        
     },
     vwBtns2: {
 		alignItems: 'center',
-		justifyContent: 'flex-end',
+		justifyContent: 'center',
 		flexDirection: 'row',
 		position: 'absolute',
         top: 10,
-        marginLeft: '38%'
+        marginLeft: '26%',
+        width: 3
+    },
+    vwBtns3: {
+		alignItems: 'center',
+		justifyContent: 'center',
+		flexDirection: 'row',
+		position: 'absolute',
+        top: 10,
+        marginLeft: '41%',
+    },
+    vwBtns4: {
+		alignItems: 'center',
+		justifyContent: 'center',
+		flexDirection: 'row',
+		position: 'absolute',
+        top: 10,
+        marginLeft: '55%',
 	},
     
 

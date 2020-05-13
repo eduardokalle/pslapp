@@ -1,11 +1,29 @@
 import React, { Component } from "react";
 import { StyleSheet, View, ImageBackground, Text, Button, Linking } from "react-native";
 import Icon from 'react-native-vector-icons/FontAwesome5';
+import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
 import Social from './Social';
 
 function PricePay (props) {
-
+   
+   const TablePrice = {
+    tableHead: ['', 'Tipo Pago ', 'Tiempo', 'Precio'],
+    tableTitle: ['Medicia G', 'Enfermeria', 'Pediatria', 'Odontologia','Fisioterapia','Psicologia'],
+    tableData: [
+      ['*************', '*****', '*****'],
+      ['*************', '*****', '*****'],
+      ['*************', '*****', '*****'],
+      ['*************', '*****', '*****'],
+      ['*************', '*****', '*****'],
+      ['*************', '*****', '*****']
+    ]
+  }
+   
+ 
+  
   return (
+       
+   
       <>
         <View style={styles.vheader}>
         </View>
@@ -32,8 +50,16 @@ function PricePay (props) {
               </View>
           </ImageBackground>
         </View>
-        <View >
-            
+        <View style={styles.table}>
+            <View style={styles.containerTable}>
+              <Table borderStyle={{borderWidth: 1}}>
+                <Row data={TablePrice.tableHead} flexArr={[1, 1, 1, 1]} style={styles.headTable} textStyle={styles.textTable}/>
+                <TableWrapper style={styles.wrapperTable}>
+                  <Col data={TablePrice.tableTitle} style={styles.titleTable} heightArr={[45,45]} textStyle={styles.textTable}/>
+                  <Rows data={TablePrice.tableData} flexArr={[1, 1, 1]} style={styles.rowTable} textStyle={styles.textTable}/>
+                </TableWrapper>
+              </Table>
+          </View>
         </View>
 
       </>    
@@ -96,6 +122,37 @@ vheader : {
 vbtn: {
   marginRight: 10,
 },
+table: {
+  width: 400,
+  height: 400, 
+},
+
+// Style Table 
+
+containerTable: { 
+  flex: 1, 
+  padding: 11, 
+  paddingTop: 28, 
+  backgroundColor: '#fff' 
+},
+headTable: {  
+  height: 40,  
+  backgroundColor: '#f1f8ff'  
+},
+wrapperTable: { 
+  flexDirection: 'row' 
+},
+titleTable: { 
+  backgroundColor: '#f6f8fa' 
+},
+rowTable: {  
+  height: 45  
+},
+textTable: { 
+  textAlign: 'center'
+}
+
+
 });
 
 export default PricePay;
