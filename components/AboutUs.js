@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { StyleSheet, View, ImageBackground, Text, Button, Linking } from "react-native";
 import Social from './Social';
 
-function WorkWithUs(props) {
+function AboutU(props) {
   return (
         <>
             <View style={styles.vheader}>
@@ -16,7 +16,7 @@ function WorkWithUs(props) {
                 imageStyle={styles.image_imageStyle}
             >
                 <View style={styles.overlay}>
-                <Text style={styles.scienceChannel}>Trabaja con Nosotros</Text>
+                <Text style={styles.scienceChannel}>Sobre Nosotros</Text>
                 <View style={styles.following}>
                   <Button title="Click aqui"
                         onPress={() => {
@@ -84,4 +84,4 @@ const styles = StyleSheet.create({
 },  
 });
 
-export default WorkWithUs;
+export default AboutU;

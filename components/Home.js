@@ -1,13 +1,33 @@
 import * as React from 'react';
 import { ImageBackground, Text, View, StyleSheet, Button,Linking } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
+import Social from './Social2';
 
 export default function Home() {
 	return (
 		<View style={styles.container}>
 			<ImageBackground source={require('../assets/backgr.png')} style={styles.image}>
 				<View style={styles.vwTexto}>
-					<Text style={styles.text1}>Clinic Health PSL</Text>
+				<Social/> 
+					<Text style={styles.text1}>Clinica      Te           Protejo</Text>
+					
 					<Text style={styles.text2}>Salud a tu alcance</Text>
+				</View>
+				<View style={styles.vwBtns}>	
+					<View style={styles.vbtn}>	
+						<Icon.Button name="whatsapp" onPress={() => {	
+							Linking.openURL('https://wa.me/573124796067');	
+							}} solid>	
+							Contactanos 	
+						</Icon.Button>  	
+					</View>	
+					<View style={styles.vbtn}>	
+					    <Icon.Button name="phone" onPress={() => {
+						          	Linking.openURL(`tel:${+573124796067}`);
+						       	}} solid>
+							          Llamanos   
+						</Icon.Button>	
+					</View>	
 				</View>
 			</ImageBackground>
 		</View>
@@ -36,7 +56,7 @@ const styles = StyleSheet.create({
 	},
 	vwTexto: {
 		position: 'absolute',
-		top: 110,
+		top: 50,
 		marginLeft: '5%',
 		width: '95%',
 	},
@@ -55,5 +75,6 @@ const styles = StyleSheet.create({
 		justifyContent: 'flex-start',
 		color: '#fff',
 		fontSize:30
-	}
+	},
+
 });
