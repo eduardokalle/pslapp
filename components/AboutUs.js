@@ -2,39 +2,64 @@ import React, { Component } from "react";
 import { StyleSheet, View, ImageBackground, Text, Button, Linking } from "react-native";
 import Social from './Social';
 
-function AboutU(props) {
-  return (
-        <>
-            <View style={styles.vheader}>
-            </View>
-            <Social/>  
-            <View style={styles.container}>
-            <ImageBackground
+/*
+ <ImageBackground
                 source={require("../assets/images/wu.png")}
                 resizeMode="cover"
                 style={styles.image}
                 imageStyle={styles.image_imageStyle}
             >
-                <View style={styles.overlay}>
-                <Text style={styles.scienceChannel}>Sobre Nosotros</Text>
-                <View style={styles.following}>
-                  <Button title="Click aqui"
-                        onPress={() => {
-                        Linking.openURL('https://forms.gle/Qnq76WLj7AJchSNw9');
-                      }} solid/>
-                </View>
-                <Text style={styles.followers}>Conectamos posibilidades para cumplir sueños</Text>
-                </View>
-            </ImageBackground>
-            </View>
+            <View style={styles.overlay}>
+*/
+
+function AboutU(props) {
+  return (
+        <>
+            <View style={styles.vheader}>
+              </View>
+                  <Social/>
+                    <View style={styles.vTitulo}>
+                      <Text style={styles.textTitulo}>Quienes Somos</Text>
+                    </View>  
+                    <View style={styles.container1}>
+                    <Text style={styles.textTitulo1}>Misión</Text>
+                    <Text style={styles.text1}>Satisfacer las necesidades de salud de nuestra población ofreciéndole 
+                          servicios de atención general y especializada y  con calidad y eficiencia.
+                    </Text>
+                    </View>
+            <View style={styles.division}></View>
+                    <View style={styles.container2}>
+                    <Text style={styles.textTitulo2}>Visión</Text>
+                    <Text style={styles.text1}>Queremos ser los referentes de salud de nuestra población, aportando calidad, confianza y seguridad en nuestros servicios de salud que reciben todos los ciudadanos que atendemos a lo largo de su vida.
+                                Queremos alcanzar la excelencia en todos los ámbitos de nuestra organización y contribuir así al progreso sostenible del sistema sanitario.
+                                Queremos que los profesionales se sientan partícipes y orgullosos de pertenecer a nuestra organización.
+                    </Text>
+                    </View>
+            <View style={styles.division}></View>
+            <View style={styles.container3}>
+                    <Text style={styles.textTitulo3}>¿Qué es protejo?</Text>
+                    <Text style={styles.text3}>Somos una empresa  prestadora de servicios generales y  de salud .  quienes trabajamos con un grupo de profesionales para atender tus necesidades y protejer tu tranquilidad .
+                    </Text>
+                    </View>
+            <View style={styles.division2}></View>
         </>    
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  container1: {
     width: 400,
-    height: 246,
+    height: 150,
+    overflow: "hidden"
+  },
+  container2: {
+    width: 400,
+    height: 260,
+    overflow: "hidden"
+  },
+   container3: {
+    width: 400,
+    height: 160,
     overflow: "hidden"
   },
   image: {
@@ -45,10 +70,28 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(30,26,26,0.4)",
     flex: 1
   },
-  scienceChannel: {
-    color: "rgba(255,255,255,1)",
+  textTitulo1: {
+    color: "black",
     fontSize: 24,
-    marginTop: 43,
+    marginTop: 24,
+    alignSelf: "center"
+  },
+  textTitulo2: {
+    color: "black",
+    fontSize: 24,
+    marginTop: 24,
+    alignSelf: "center"
+  },
+  textTitulo3: {
+    color: "black",
+    fontSize: 24,
+    marginTop: 23,
+    alignSelf: "center"
+  },
+  textTitulo: {
+    color: "white",
+    fontSize: 24,
+    marginTop: -2,
     alignSelf: "center"
   },
   following: {
@@ -66,11 +109,29 @@ const styles = StyleSheet.create({
     fontSize: 14,
     alignSelf: "center"
   },
-  followers: {
-    color: "rgba(255,255,255,1)",
-    fontSize: 16,
-    marginTop: 39,
-    alignSelf: "center"
+  text1: {
+    color: "black",
+    fontSize: 15,
+    marginTop: 18,
+    alignSelf: "center",
+    paddingLeft: 15,
+    paddingRight:15,
+  },
+  text2: {
+    color: "black",
+    fontSize: 15,
+    marginTop: 18,
+    alignSelf: "center",
+    paddingLeft: 15,
+    paddingRight:15,
+  },
+  text3: {
+    color: "black",
+    fontSize: 15,
+    marginTop: 18,
+    alignSelf: "center",
+    paddingLeft: 15,
+    paddingRight:15,
   },
   
   vheader : {
@@ -82,6 +143,33 @@ const styles = StyleSheet.create({
     paddingRight:0,
     //borderColor: 'red'
 },  
+vTitulo : {
+  width: 'auto',
+  height: 30,
+  backgroundColor : '#007aff',
+  color : '#fff',
+  paddingLeft: 0,
+  paddingRight:0,
+  //borderColor: 'red'
+},
+division : {
+  width: 'auto',
+  height: 8,
+  backgroundColor : '#007aff',
+  color : '#fff',
+  paddingLeft: 0,
+  paddingRight:0,
+  //borderColor: 'red'
+},
+division2 : {
+  width: 'auto',
+  height: 40,
+  backgroundColor : '#007aff',
+  color : '#fff',
+  paddingLeft: 0,
+  paddingRight:0,
+  //borderColor: 'red'
+}
 });
 
 export default AboutU;

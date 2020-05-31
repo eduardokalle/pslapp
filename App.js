@@ -22,7 +22,7 @@ export default function App() {
            <Drawer.Navigator initialRouteName="Home">
               <Drawer.Screen name="Home" component={Home} />
               <Drawer.Screen name="Servicios" component={Services} />
-              <Drawer.Screen name="Sobre Nosotros" component={AboutUs} />
+              <Drawer.Screen name="Quienes Somos" component={AboutUs} />
               <Drawer.Screen name="Reserva tu Cita" component={Appointment} />
               <Drawer.Screen name="Trabaja con Nosotros" component={WorkWithUs} />
               <Drawer.Screen name="Precios y Pagos" component={PricePay} />
