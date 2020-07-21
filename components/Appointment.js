@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import { StyleSheet, View, ImageBackground, Text, Button, Linking } from "react-native";
-import Icon from 'react-native-vector-icons/FontAwesome5';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import Social from './Social';
 
 function appointment(props) {
   return (
-        <>
-          <View style={styles.vheader}>
-          </View>
+      <>
+          <View style={styles.vheader}>   
+        </View>
             <Social/>  
           <View style={styles.container}>
             <ImageBackground
@@ -20,14 +20,14 @@ function appointment(props) {
                 <Text style={styles.scienceChannel}>Reserva tu Cita </Text>
                 <View style={styles.following}>
                   <View style={styles.vbtn}> 
-                    <Icon.Button name="whatsapp" onPress={() => {
+                    <Icon.Button style={styles.vbtnPhone}  name="whatsapp" onPress={() => {
 						          	Linking.openURL('https://wa.me/573124796067');
 						       	}} solid>
 							          Whatsapp 
 						        </Icon.Button>
                     </View>
                     <View style={styles.vbtn}> 
-                    <Icon.Button name="phone" onPress={() => {
+                    <Icon.Button style={styles.vbtnPhone}  name="phone" onPress={() => {
 						          	Linking.openURL(`tel:${+573124796067}`);
 						       	}} solid>
 							          Celular   
@@ -38,11 +38,7 @@ function appointment(props) {
                 </View>
             </ImageBackground>
           </View>
-          <View >
-
-          </View>
-
-        </>    
+      </>
   );
 }
 
@@ -92,16 +88,20 @@ const styles = StyleSheet.create({
   
   vheader : {
     width: 'auto',
-    height: 75,
-    backgroundColor : '#007aff',
+    height: 50,
+    backgroundColor : '#fff',
     color : '#fff',
     paddingLeft: 0,
     paddingRight:0,
     //borderColor: 'red'
-},  
+},    
+
   vbtn: {
     marginRight: 10,
 },
+vbtnPhone: {
+  backgroundColor : '#C6469A'
+}
 });
 
 export default appointment;

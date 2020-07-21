@@ -39,7 +39,7 @@ function PricePay (props) {
               <Text style={styles.scienceChannel}>Precios y Pagos </Text>
               <View style={styles.following}>
                 <View style={styles.vbtn}> 
-                  <Icon.Button name="cc-mastercard" onPress={() => {
+                  <Icon.Button style={styles.vbtnPhone}  name="cc-mastercard" onPress={() => {
                                             Linking.openURL('');
                                         }} solid>
                         Pagos en linea 
@@ -112,8 +112,8 @@ followers: {
 
 vheader : {
   width: 'auto',
-  height: 75,
-  backgroundColor : '#007aff',
+  height: 50,
+  backgroundColor : '#fff',
   color : '#fff',
   paddingLeft: 0,
   paddingRight:0,
@@ -150,6 +150,9 @@ rowTable: {
 },
 textTable: { 
   textAlign: 'center'
+},
+vbtnPhone: {
+  backgroundColor : '#C6469A'
 }
 
 

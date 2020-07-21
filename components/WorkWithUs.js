@@ -5,8 +5,8 @@ import Social from './Social';
 function WorkWithUs(props) {
   return (
         <>
-            <View style={styles.vheader}>
-            </View>
+            <View style={styles.vheader}>   
+           </View> 
             <Social/>  
             <View style={styles.container}>
             <ImageBackground
@@ -27,6 +27,7 @@ function WorkWithUs(props) {
                 </View>
             </ImageBackground>
             </View>
+            
         </>    
   );
 }
@@ -75,12 +76,14 @@ const styles = StyleSheet.create({
   
   vheader : {
     width: 'auto',
-    height: 75,
-    backgroundColor : '#007aff',
+    height: 50,
+    backgroundColor : '#fff',
     color : '#fff',
     paddingLeft: 0,
     paddingRight:0,
-    //borderColor: 'red'
+  //borderColor: 'red',
+  //S marginTop: '15%' ,
+  //...StyleSheet.absoluteFill
 },  
 });
 

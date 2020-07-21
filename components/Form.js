@@ -1,15 +1,19 @@
 import * as React from 'react';
+import Icon from 'react-native-vector-icons/FontAwesome';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
+
 import { Text, 
          View, 
          StyleSheet,  
          TextInput, 
          Button,
-         Alert 
+         Alert ,
+         KeyboardAvoidingView 
          } from 'react-native';
 
 export default function  Form () {
 
-    /*
+    
     createAlert = () =>
     
         Alert.alert(
@@ -25,34 +29,41 @@ export default function  Form () {
                 ],
                 { cancelable: false }
 
-            
+                /*
                 ingresra en el button
                 onPress={this.createAlert}
+                */
                 
-        );*/
+        );
     
 
        return(
               <>
+                <KeyboardAwareScrollView
+                   style={{ backgroundColor: '#0064AD' }}
+                   resetScrollToCoords={{ x: 0, y: 0 }}
+                  
+                   scrollEnabled={false}
+                >
                 <View style={ styles.vreform }> 
                     <View style={ styles.reform }>
                         <Text style={ styles.header}> 
                             Contacta con Nosotros
                         </Text>
-                        <TextInput style = {styles.textinputF} placeholder='Tu Nombre'
+                        <TextInput style = {styles.textinputF} placeholder='Nombre'
                                 placeholderTextColor = "#fff"
                                 underlineColorAndroid={'transparent'}
                         />
-                        <TextInput style = {styles.textinputF} placeholder='Tu Apellido'
+                        <TextInput style = {styles.textinputF} placeholder='Apellido'
                                 placeholderTextColor = "#fff" 
                                 underlineColorAndroid={'transparent'}
                         />  
-                        <TextInput  style = {styles.textinputF} placeholder='Tu Email'
+                        <TextInput  style = {styles.textinputF} placeholder='Email'
                                 keyboardType={'email-address'}
                                 placeholderTextColor = "#fff"
                                 secureTextEntry={false}  underlineColorAndroid={'transparent'}  
                         /> 
-                        <TextInput  style = {styles.textinputF} placeholder='Tu telefono'
+                        <TextInput  style = {styles.textinputF} placeholder='telefono'
                                 keyboardType={'phone-pad'}
                                 placeholderTextColor = "#fff"
                                 secureTextEntry={false}  underlineColorAndroid={'transparent'}
@@ -64,13 +75,14 @@ export default function  Form () {
                                 underlineColorAndroid={'transparent'}
                         /> 
                         <View style={ styles.button }>
-                            <Button 
+                            <Button color="#C6469A"
                                 title="     Enviar      "
-                            
+                                onPress={this.createAlert}
                             />
                         </View> 
                     </View>
-                </View>
+                  </View>
+                  </KeyboardAwareScrollView>
               </>
        );
 }
@@ -79,7 +91,7 @@ const styles = StyleSheet.create({
     vreform: {
         flex: 1,
         alignSelf :'stretch',
-        backgroundColor : '#013862',
+        backgroundColor : '#0064AD',
         color : '#fff',
         //marginLeft: '5%',
     },
@@ -87,7 +99,7 @@ const styles = StyleSheet.create({
         top: 70,
         flex: 1,
         alignSelf :'stretch',
-        backgroundColor : '#013862',
+        backgroundColor : '#0064AD',
         color : '#fff',
         //marginLeft: '5%',
     },
@@ -97,7 +109,7 @@ const styles = StyleSheet.create({
         paddingTop: 40,
         paddingBottom:10,
         marginBottom:40,
-        borderBottomColor:'#36E8C0',
+        borderBottomColor:'#fff',
         borderBottomWidth:1,
         marginLeft: '10%',
         marginRight : '10%',
@@ -107,13 +119,13 @@ const styles = StyleSheet.create({
         alignSelf :'stretch',
         color: '#fff',
         height:40,
-        marginBottom:40,
+        marginBottom:30,
         borderBottomColor:'#fff',
         borderBottomWidth:1,
-        backgroundColor: '#013862',
+        backgroundColor: '#0064AD',
         marginLeft: '10%',
         marginRight : '10%',
-        flex: -15,
+        //flex: -15,
     },
     textinputT :{
         alignSelf :'stretch',
@@ -122,25 +134,27 @@ const styles = StyleSheet.create({
         marginBottom:60,
         borderBottomColor:'#fff',
         borderBottomWidth:1,
-        backgroundColor: '#013862',
+        backgroundColor: '#0064AD',
         marginLeft: '10%',
         marginRight : '10%',
-        flex: -15,
+        //flex: -15,
     },
     button:{
        // alignSelf :'center',
         alignSelf :'flex-end',
         alignItems: 'center',
         padding: 0,
-        backgroundColor:'#59cbbd',
+        backgroundColor:'#C6469A',
         paddingRight: 0,
         marginBottom: 180,
-        marginRight :'10%'
-        
-        
+        marginRight :'10%',
     },
      textb:{
         color: '#fff',
-        fontWeight : 'bold'
+        fontWeight : 'bold',
+        
     },
+     vbtnPhone: {
+        backgroundColor : '#C6469A'
+    }
 });

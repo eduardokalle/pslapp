@@ -18,7 +18,7 @@ function Services(props) {
      <Social/> 
       <View style={styles.container}> 
         <View style={styles.container1}>
-               <Text style={styles.textc}>Clinic Health PSL Servicios</Text>  
+               <Text style={styles.textc}>Nuestros Servicios</Text>  
         </View>
       </View>   
       <View style={styles.container2}>
@@ -134,8 +134,8 @@ const styles = StyleSheet.create({
 
     vheader : {
         width: 'auto',
-        height: 60,
-        backgroundColor : '#007aff',
+        height: 50,
+        backgroundColor : '#fff',
         color : '#fff',
         paddingLeft: 0,
         paddingRight:0,
@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
     container1: {
         width: 'auto',
         height: 60,
-        backgroundColor: '#007aff',
+        backgroundColor: '#0064AD',
         flexDirection: 'row',
         alignItems: "center",
         justifyContent: "space-around",
@@ -158,13 +158,13 @@ const styles = StyleSheet.create({
         height: 0,
         width: 0
         },
-        shadowColor: '#007aff',
+        shadowColor: '#0064AD',
         shadowRadius: 0
     },
     following: {
         width: 100,
         height: 38,
-        backgroundColor: "#007aff",
+        backgroundColor: "#0064AD",
         alignSelf: "center",
         opacity: 1,
         borderRadius: 5,

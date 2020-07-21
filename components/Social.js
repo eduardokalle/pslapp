@@ -6,7 +6,8 @@ import { Text,
     StyleSheet,  
     TextInput, 
     Button,
-    Linking
+    Linking,
+    Image
     } from 'react-native';
 
 
@@ -14,12 +15,15 @@ const Social = () => {
     return ( 
        <>
           <View style={styles.container}>
+                <Image
+                style={styles.imgS}
+                source={require('../assets/images/ProtejoLogo.png')}
+                />
                 <View style={styles.vwBtns1}>
                         <Icon.Button 
-                        name="facebook"
-                        color='#013862'
+                        color='#000000'
                         backgroundColor= "#fff"
-                        onPress={() => {
+                        name="facebook" onPress={() => {
 							Linking.openURL('https://www.facebook.com');
 							}} solid>
                                 
@@ -27,8 +31,7 @@ const Social = () => {
                         </View>
                 <View style={styles.vwBtns2}>
                         <Icon.Button 
-                        
-                        color='#013862'
+                        color='#000000'
                         backgroundColor= "#fff"
                         name="instagram" onPress={() => {
 							Linking.openURL('https://www.facebook.com');
@@ -38,7 +41,7 @@ const Social = () => {
 				</View>
                 <View style={styles.vwBtns3}>
                         <Icon.Button 
-                        color='#013862'
+                        color='#000000'
                         backgroundColor= "#fff"
                         name="twitter" onPress={() => {
 							Linking.openURL('https://www.facebook.com');
@@ -48,7 +51,7 @@ const Social = () => {
 				</View>
                 <View style={styles.vwBtns4}>
                         <Icon.Button 
-                        color='#013862'
+                        color='#000000'
                         backgroundColor= "#fff"
                         name="linkedin" onPress={() => {
 							Linking.openURL('https://www.facebook.com');
@@ -69,7 +72,8 @@ const styles = StyleSheet.create({
         width: 400,
         height: 55,
         backgroundColor: "#fff",
-        flexDirection: "row"
+        flexDirection: "row",
+        marginLeft: '0%',
       },
       text: {
 		flex: 1,
@@ -86,8 +90,8 @@ const styles = StyleSheet.create({
 		justifyContent: 'center',
 		flexDirection: 'row',
 		position: 'absolute',
-        top: 10,
-        marginLeft: '18%'
+        top: 3,
+        marginLeft: '35%'
        
     },
     vwBtns2: {
@@ -95,8 +99,8 @@ const styles = StyleSheet.create({
 		justifyContent: 'center',
 		flexDirection: 'row',
 		position: 'absolute',
-        top: 10,
-        marginLeft: '26%',
+        top: 3,
+        marginLeft: '43%',
         width: 3
     },
     vwBtns3: {
@@ -104,16 +108,26 @@ const styles = StyleSheet.create({
 		justifyContent: 'center',
 		flexDirection: 'row',
 		position: 'absolute',
-        top: 10,
-        marginLeft: '41%',
+        top: 3,
+        marginLeft: '61%',
     },
     vwBtns4: {
 		alignItems: 'center',
 		justifyContent: 'center',
 		flexDirection: 'row',
 		position: 'absolute',
-        top: 10,
-        marginLeft: '55%',
+        top: 3,
+        marginLeft: '78%',
+    },
+    imgS: {
+		alignItems: 'center',
+		justifyContent: 'center',
+		flexDirection: 'row',
+		position: 'absolute',
+        top: 3,
+        height: '75%',
+        width: '35%',
+        marginLeft: '5%',
 	},
     
 

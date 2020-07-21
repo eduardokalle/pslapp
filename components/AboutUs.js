@@ -18,23 +18,23 @@ function AboutU(props) {
             <View style={styles.vheader}>
               </View>
                   <Social/>
-                    <View style={styles.vTitulo}>
-                      <Text style={styles.textTitulo}>Quienes Somos</Text>
-                    </View>  
-                    <View style={styles.container1}>
-                    <Text style={styles.textTitulo1}>Misión</Text>
-                    <Text style={styles.text1}>Satisfacer las necesidades de salud de nuestra población ofreciéndole 
-                          servicios de atención general y especializada y  con calidad y eficiencia.
-                    </Text>
-                    </View>
+            <View style={styles.vTitulo}>
+              <Text style={styles.textTitulo}>Quienes Somos</Text>
+            </View>  
+            <View style={styles.container1}>
+              <Text style={styles.textTitulo1}>Misión</Text>
+              <Text style={styles.text1}>Satisfacer las necesidades de salud de nuestra población ofreciéndole 
+                  servicios de atención general y especializada y  con calidad y eficiencia.
+              </Text>
+            </View>
             <View style={styles.division}></View>
-                    <View style={styles.container2}>
-                    <Text style={styles.textTitulo2}>Visión</Text>
-                    <Text style={styles.text1}>Queremos ser los referentes de salud de nuestra población, aportando calidad, confianza y seguridad en nuestros servicios de salud que reciben todos los ciudadanos que atendemos a lo largo de su vida.
-                                Queremos alcanzar la excelencia en todos los ámbitos de nuestra organización y contribuir así al progreso sostenible del sistema sanitario.
-                                Queremos que los profesionales se sientan partícipes y orgullosos de pertenecer a nuestra organización.
-                    </Text>
-                    </View>
+            <View style={styles.container2}>
+              <Text style={styles.textTitulo2}>Visión</Text>
+            <Text style={styles.text1}>Queremos ser los referentes de salud de nuestra población, aportando calidad, confianza y seguridad en nuestros servicios de salud que reciben todos los ciudadanos que atendemos a lo largo de su vida.{'   '}
+                        Queremos alcanzar la excelencia en todos los ámbitos de nuestra organización y contribuir así al progreso sostenible del sistema sanitario.
+                        Queremos que los profesionales se sientan partícipes y orgullosos de pertenecer a nuestra organización.
+            </Text>
+            </View>
             <View style={styles.division}></View>
             <View style={styles.container3}>
                     <Text style={styles.textTitulo3}>¿Qué es protejo?</Text>
@@ -50,17 +50,23 @@ const styles = StyleSheet.create({
   container1: {
     width: 400,
     height: 150,
-    overflow: "hidden"
+    overflow: "hidden",
+    backgroundColor : 'rgba(25, 100, 174, 0.7)',
+    
   },
   container2: {
     width: 400,
     height: 260,
-    overflow: "hidden"
+    overflow: "hidden",
+    backgroundColor : 'rgba(25, 100, 174, 0.7)',
+    
   },
    container3: {
     width: 400,
     height: 160,
-    overflow: "hidden"
+    overflow: "hidden",
+    backgroundColor : 'rgba(25, 100, 174, 0.7)',
+    
   },
   image: {
     flex: 1
@@ -71,19 +77,19 @@ const styles = StyleSheet.create({
     flex: 1
   },
   textTitulo1: {
-    color: "black",
+    color: "white",
     fontSize: 24,
     marginTop: 24,
     alignSelf: "center"
   },
   textTitulo2: {
-    color: "black",
+    color: "white",
     fontSize: 24,
     marginTop: 24,
     alignSelf: "center"
   },
   textTitulo3: {
-    color: "black",
+    color: "white",
     fontSize: 24,
     marginTop: 23,
     alignSelf: "center"
@@ -91,7 +97,7 @@ const styles = StyleSheet.create({
   textTitulo: {
     color: "white",
     fontSize: 24,
-    marginTop: -2,
+    marginTop: 7,
     alignSelf: "center"
   },
   following: {
@@ -110,7 +116,7 @@ const styles = StyleSheet.create({
     alignSelf: "center"
   },
   text1: {
-    color: "black",
+    color: "white",
     fontSize: 15,
     marginTop: 18,
     alignSelf: "center",
@@ -118,7 +124,7 @@ const styles = StyleSheet.create({
     paddingRight:15,
   },
   text2: {
-    color: "black",
+    color: "white",
     fontSize: 15,
     marginTop: 18,
     alignSelf: "center",
@@ -126,7 +132,7 @@ const styles = StyleSheet.create({
     paddingRight:15,
   },
   text3: {
-    color: "black",
+    color: "white",
     fontSize: 15,
     marginTop: 18,
     alignSelf: "center",
@@ -136,8 +142,9 @@ const styles = StyleSheet.create({
   
   vheader : {
     width: 'auto',
-    height: 75,
-    backgroundColor : '#007aff',
+    height: 50,
+    backgroundColor : '#fff',
+    opacity: 0.7,
     color : '#fff',
     paddingLeft: 0,
     paddingRight:0,
@@ -145,8 +152,8 @@ const styles = StyleSheet.create({
 },  
 vTitulo : {
   width: 'auto',
-  height: 30,
-  backgroundColor : '#007aff',
+  height: 70,
+  backgroundColor : 'rgba(25, 100, 174, 0.7)',
   color : '#fff',
   paddingLeft: 0,
   paddingRight:0,
@@ -155,7 +162,8 @@ vTitulo : {
 division : {
   width: 'auto',
   height: 8,
-  backgroundColor : '#007aff',
+  backgroundColor : '#1964AE',
+  opacity: 0.7,
   color : '#fff',
   paddingLeft: 0,
   paddingRight:0,
@@ -164,7 +172,8 @@ division : {
 division2 : {
   width: 'auto',
   height: 40,
-  backgroundColor : '#007aff',
+  backgroundColor : '#1964AE',
+  opacity: 0.7,
   color : '#fff',
   paddingLeft: 0,
   paddingRight:0,
