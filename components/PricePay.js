@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, View, ImageBackground, Text, Button, Linking } from "react-native";
+import { StyleSheet, View, ImageBackground, Text, Button, Linking, ScrollView  } from "react-native";
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
 import Social from './Social';
@@ -50,6 +50,7 @@ function PricePay (props) {
               </View>
           </ImageBackground>
         </View>
+        <ScrollView horizontal={true}>
         <View style={styles.table}>
             <View style={styles.containerTable}>
               <Table borderStyle={{borderWidth: 1}}>
@@ -61,6 +62,7 @@ function PricePay (props) {
               </Table>
           </View>
         </View>
+        </ScrollView>
 
       </>    
 );
@@ -153,7 +155,8 @@ textTable: {
 },
 vbtnPhone: {
   backgroundColor : '#C6469A'
-}
+},
+dataWrapper: { marginTop: -1 }
 
 
 });

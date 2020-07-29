@@ -90,8 +90,8 @@ const styles = StyleSheet.create({
 		justifyContent: 'center',
 		flexDirection: 'row',
 		position: 'absolute',
-        top: 0,
-        marginLeft: '35%'
+        top: 3,
+        marginLeft: '45%'
        
     },
     vwBtns2: {
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
 		flexDirection: 'row',
 		position: 'absolute',
         top: 0,
-        marginLeft: '43%',
+        marginLeft: '50%',
         width: 3
     },
     vwBtns3: {
@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
 		flexDirection: 'row',
 		position: 'absolute',
         top: 0,
-        marginLeft: '61%',
+        marginLeft: '65%',
     },
     vwBtns4: {
 		alignItems: 'center',
@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
 		flexDirection: 'row',
 		position: 'absolute',
         top: 0,
-        marginLeft: '78%',
+        marginLeft: '77%',
     },
     imgS: {
 		alignItems: 'center',
@@ -127,7 +127,7 @@ const styles = StyleSheet.create({
         top: 0,
         height: '75%',
         width: '35%',
-        marginLeft: '5%',
+        marginLeft: '12%',
 	},
     
 

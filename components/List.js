@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Social from './Social';
 import { List, ListItem } from 'react-native-elements';
 
-import { StyleSheet, View, TouchableOpacity, Image, ImageBackground, Text } from 'react-native';
+import { StyleSheet, View, TouchableOpacity, Image, ImageBackground, Text, SafeAreaView, ScrollView } from 'react-native';
 
 const list = [
 	{
@@ -23,7 +23,6 @@ const list = [
 		subtitle: 'Usuario',
 		text:'Lorem ipsum dolor sit amet consectetur adipiscing elit nullam ligula Hac sodales non vestibulum morbi facilisis scelerisque convallis sed netus, litora platea aliquam.'
 	},
-	,
 	{
 		name: 'Dacre Mont',
 		avatar_url: 'https://i.pinimg.com/236x/78/40/13/784013e5f3429a8de3b0d1f3213d26ca.jpg',
@@ -37,10 +36,34 @@ const list = [
 		text:'Lorem ipsum dolor sit amet consectetur adipiscing elit nullam ligula'
 	},
 	{
+		name: 'Chris Pine',
+		avatar_url: 'https://i.pinimg.com/236x/da/d2/09/dad2097b7bd7ffc73b9d838bf0d2c3fd.jpg',
+		subtitle: 'Usuario',
+		text:'Lorem ipsum dolor sit amet consectetur adipiscing elit nullam ligula Hac'
+	},
+	{
+		name: 'Margot Robbie',
+		avatar_url: 'https://i.pinimg.com/236x/e1/f8/ff/e1f8ff267b8551dd1ccf08cf3c734374.jpg',
+		subtitle: 'Usuario',
+		text:'Lorem ipsum dolor sit amet consectetur adipiscing elit nullam ligula Hac'
+	},
+	{
 		name: 'Amanda Sey',
 		avatar_url: 'https://i.pinimg.com/236x/ab/99/88/ab9988f91d06b93e3fbb1693ae316308.jpg',
 		subtitle: 'Usuario',
 		text:'Lorem ipsum dolor sit amet consectetur adipiscing elit nullam ligula Hac sodales non vestibulum morbi facilisis scelerisque convallis sed netus, litora platea aliquam ornare nulla orci curae dui pharetra eget'
+	},
+	{
+		name: 'Jennifer Lawrence',
+		avatar_url: 'https://i.pinimg.com/236x/01/84/08/018408df37ac46f98f54b8b8f2d62a4a.jpg',
+		subtitle: 'Usuario',
+		text:'Lorem ipsum dolor sit amet consectetur adipiscing elit nullam ligula Hac sodales'
+	},
+	{
+		name: 'Patrick dempsey',
+		avatar_url: 'https://i.pinimg.com/236x/a9/b2/fd/a9b2fdb12dcf8a29b82b1ba291bcefac--patrick-dempsy-dr-mcdreamy.jpg',
+		subtitle: 'Usuario',
+		text:'Lorem ipsum dolor sit amet consectetur adipiscing elit nullam ligula Hac sodales'
 	}
 ];
 
@@ -50,6 +73,8 @@ function ListT(props) {
 		<View style={styles.vheader}>   
            </View> 
 			<Social />
+		<SafeAreaView style={styles.safeAreaView}>
+            <ScrollView style={styles.scrollView}>
 			<View>
 				<View style={styles.container1}>
 					<Text style={styles.textc}>Testimonios</Text>
@@ -68,6 +93,8 @@ function ListT(props) {
 					/>
 				))}
 			</View>
+			</ScrollView>
+        </SafeAreaView>  
 		</>
 	);
 }
@@ -111,6 +138,14 @@ const styles = StyleSheet.create({
 		},
 		shadowColor: '#0064AD',
 		shadowRadius: 0
+	},
+	safeAreaView: {
+	flex: 1,
+	//marginTop: Constants.statusBarHeight,
+	},
+	scrollView: {
+	backgroundColor: 'pink',
+	marginHorizontal: 0,
 	}
 });
 

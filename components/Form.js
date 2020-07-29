@@ -11,7 +11,7 @@ import { Text,
          KeyboardAvoidingView 
          } from 'react-native';
 
-export default function  Form () {
+export default function  AppointmentForm () {
 
     
     createAlert = () =>

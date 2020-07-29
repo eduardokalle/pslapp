@@ -1,3 +1,18 @@
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+
+import Drawer from './navigation/Drawer';
+
+export default () => {
+  return (
+    <NavigationContainer>
+      <Drawer />
+    </NavigationContainer>
+  );
+};
+
+
+/*
 import * as React from 'react';
 import { View, StyleSheet } from 'react-native';
 
@@ -45,3 +60,4 @@ const styles = StyleSheet.create({
     paddingRight:0,
   },
 });
+*/

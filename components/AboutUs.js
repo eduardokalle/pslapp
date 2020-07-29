@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { StyleSheet, View, ImageBackground, Text, Button, Linking } from "react-native";
+import { StyleSheet, View, ImageBackground, Text, Button, Linking, SafeAreaView, ScrollView } from "react-native";
 import Social from './Social';
+//import Constants from 'expo-constants';
 
 /*
  <ImageBackground
@@ -14,10 +15,13 @@ import Social from './Social';
 
 function AboutU(props) {
   return (
-        <>
+       <>
+        
             <View style={styles.vheader}>
               </View>
                   <Social/>
+            <SafeAreaView style={styles.safeAreaView}>
+            <ScrollView style={styles.scrollView}>       
             <View style={styles.vTitulo}>
               <Text style={styles.textTitulo}>Quienes Somos</Text>
             </View>  
@@ -42,7 +46,9 @@ function AboutU(props) {
                     </Text>
                     </View>
             <View style={styles.division2}></View>
-        </>    
+          </ScrollView>
+        </SafeAreaView>  
+      </>    
   );
 }
 
@@ -178,6 +184,14 @@ division2 : {
   paddingLeft: 0,
   paddingRight:0,
   //borderColor: 'red'
+},
+safeAreaView: {
+  flex: 1,
+  //marginTop: Constants.statusBarHeight,
+},
+scrollView: {
+  backgroundColor: 'pink',
+  marginHorizontal: 0,
 }
 });
 

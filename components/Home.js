@@ -1,16 +1,16 @@
 import * as React from 'react';
 import { ImageBackground, Text, View, StyleSheet, Button,Linking } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import Social from './Social2';
+import Social from './Social';
 
 export default function Home() {
 	return (
-		<View style={styles.container}>
-			<ImageBackground color='#fff' style={styles.image}>
-				<View style={styles.vwTexto}>
+		<>
+			<View style={styles.vheader}>   
+           </View>
+			<ImageBackground  style={styles.image}>
 				<Social/> 
 					<Text style={styles.text1}>Protejo      Tu           Salud</Text>
-				</View>	
 				<View style={styles.vwTexto2}>
 					<Text style={styles.text2}>Salud a tu alcance</Text>
 				</View>
@@ -34,11 +34,19 @@ export default function Home() {
 					</View>
 				</View>
 			</ImageBackground>
-		</View>
+		</>
 	);
 }
 
 const styles = StyleSheet.create({
+	vheader: {
+		width: 'auto',
+		height: 50,
+		backgroundColor: '#fff',
+		color: '#fff',
+		paddingLeft: 0,
+		paddingRight: 0
+	},
 	container: {
 		flex: 1,
 		flexDirection: 'column'
@@ -46,14 +54,15 @@ const styles = StyleSheet.create({
 	image: {
 		flex: 1,
 		resizeMode: 'cover',
-		justifyContent: 'flex-end'
+		justifyContent: 'flex-end',
+		backgroundColor: '#fff',
 	},
 	vwBtns: {
 		alignItems: 'center',
 		justifyContent: 'center',
 		flexDirection: 'row',
 		position: 'relative',
-		bottom: 180,
+		bottom: 150,
 	},
 	vbtn: {
 		marginRight: 10,
@@ -83,7 +92,8 @@ const styles = StyleSheet.create({
 		fontWeight: '100',
 		fontSize:80,
 		color: '#000000',
-		fontFamily: ''
+		fontFamily: '',
+		paddingLeft: '5%',
 	},
 	text2: {
 		flex: 1,
