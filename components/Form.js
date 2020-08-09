@@ -1,4 +1,5 @@
-import * as React from 'react';
+import React, { Component } from 'react';
+import axios from 'axios';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
@@ -11,9 +12,52 @@ import { Text,
          KeyboardAvoidingView 
          } from 'react-native';
 
-export default function  AppointmentForm () {
+class form extends Component {
 
+    constructor(){
+        super()
     
+        this.state = {
+    
+          nombre:'',
+          apellido:'',
+          tel:'',
+          mail:'',
+          mensaje:''
+        }
+    
+        this.handleChange = this.handleChange.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
+      }
+    
+       handleChange = e => {
+             this.setState( { [e.target.name]: e.target.value } )
+       }
+    
+       
+       handleSubmit (e) {
+          e.preventDefault()
+    
+          const { nombre , apellido , tel , mail , mensaje } = this.state
+    
+         axios.post('http://localhost:4500/sendMail' , {
+              nombre,
+              apellido,
+              tel,
+              mail,
+              mensaje
+          }) 
+            .then(res=>{
+              console.log(res);
+              console.log(res.data);
+              window.location = "/retrieve" 
+            })
+           
+       }
+    
+
+render() {
+              
     createAlert = () =>
     
         Alert.alert(
@@ -45,7 +89,7 @@ export default function  AppointmentForm () {
                   
                    scrollEnabled={false}
                 >
-                <View style={ styles.vreform }> 
+                <View style={ styles.vreform } onSubmit = {this.handleSubmit}> 
                     <View style={ styles.reform }>
                         <Text style={ styles.header}> 
                             Contacta con Nosotros
@@ -53,26 +97,33 @@ export default function  AppointmentForm () {
                         <TextInput style = {styles.textinputF} placeholder='Nombre'
                                 placeholderTextColor = "#fff"
                                 underlineColorAndroid={'transparent'}
+                                onChange= {this.handleChange}
                         />
                         <TextInput style = {styles.textinputF} placeholder='Apellido'
                                 placeholderTextColor = "#fff" 
                                 underlineColorAndroid={'transparent'}
+                                onChange= {this.handleChange}
                         />  
                         <TextInput  style = {styles.textinputF} placeholder='Email'
                                 keyboardType={'email-address'}
                                 placeholderTextColor = "#fff"
-                                secureTextEntry={false}  underlineColorAndroid={'transparent'}  
+                                secureTextEntry={false} 
+                                underlineColorAndroid={'transparent'}  
+                                onChange= {this.handleChange}
                         /> 
                         <TextInput  style = {styles.textinputF} placeholder='telefono'
                                 keyboardType={'phone-pad'}
                                 placeholderTextColor = "#fff"
-                                secureTextEntry={false}  underlineColorAndroid={'transparent'}
+                                secureTextEntry={false}  
+                                underlineColorAndroid={'transparent'}
+                                onChange= {this.handleChange}
                         /> 
                          <TextInput  style = {styles.textinputT} placeholder='Mensaje'
                                 multiline={true}
                                 numberOfLines={3}
                                 placeholderTextColor = "#fff"
                                 underlineColorAndroid={'transparent'}
+                                onChange= {this.handleChange}
                         /> 
                         <View style={ styles.button }>
                             <Button color="#C6469A"
@@ -85,7 +136,10 @@ export default function  AppointmentForm () {
                   </KeyboardAwareScrollView>
               </>
        );
+  }
 }
+
+export default form;
 
 const styles = StyleSheet.create({
     vreform: {

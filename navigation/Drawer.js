@@ -49,7 +49,7 @@ const Screens = ({ navigation, style }) => {
         <Stack.Screen name="List">{props => <List {...props} />}</Stack.Screen>
         <Stack.Screen name="PricePay">{props => <PricePay {...props} />}</Stack.Screen>
         <Stack.Screen name="WorkWithUs">{props => <WorkWithUs {...props} />}</Stack.Screen>
-        <Stack.Screen name="Blog">{props => <Blog {...props} />}</Stack.Screen>
+        <Stack.Screen name="Blog">{props => <Blog  {...props} />}</Stack.Screen>
         <Stack.Screen name="Contact">{props => <Form {...props} />}</Stack.Screen>
       </Stack.Navigator>
     </Animated.View>
