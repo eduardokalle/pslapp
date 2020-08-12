@@ -1,46 +1,29 @@
-import React, { Component } from 'react';
+import * as React from 'react';
 import axios from 'axios';
-import Icon from 'react-native-vector-icons/FontAwesome';
+
+import {Form, Item, Input, View, Label } from 'native-base'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
+import { useFormik } from 'formik';
 
-import { Text, 
-         View, 
-         StyleSheet,  
-         TextInput, 
-         Button,
-         Alert ,
-         KeyboardAvoidingView 
-         } from 'react-native';
+import { StyleSheet,  Button, Alert } from 'react-native';
 
-class form extends Component {
+export default function form() {
+    
+              
+    const {values, isSubmitting, setFieldValue, handleSubmit, errors, resetForm} = useFormik({
 
-    constructor(){
-        super()
-    
-        this.state = {
-    
-          nombre:'',
-          apellido:'',
-          tel:'',
-          mail:'',
-          mensaje:''
-        }
-    
-        this.handleChange = this.handleChange.bind(this)
-        this.handleSubmit = this.handleSubmit.bind(this)
-      }
-    
-       handleChange = e => {
-             this.setState( { [e.target.name]: e.target.value } )
-       }
-    
-       
-       handleSubmit (e) {
-          e.preventDefault()
-    
-          const { nombre , apellido , tel , mail , mensaje } = this.state
-    
-         axios.post('http://localhost:4500/sendMail' , {
+        initialValues : {
+            nombre:'',
+            apellido:'',
+            mail:'',
+            tel:'',
+            mensaje:''
+        },
+        onSubmit : values => {
+
+            const { nombre , apellido , tel , mail , mensaje } = values;
+
+         axios.post('http://192.168.1.23:4500/sendMail' , {
               nombre,
               apellido,
               tel,
@@ -49,97 +32,99 @@ class form extends Component {
           }) 
             .then(res=>{
               console.log(res);
-              console.log(res.data);
-              window.location = "/retrieve" 
+              console.log(res.values);
+    
+                Alert.alert(
+                        "Te informamos",
+                        "Que tu registro fue enviado",
+                        [
+                        { text: "OK", onPress: () => console.log("OK Pressed") }
+                        ],
+                        { cancelable: false }
+
+                );
+                resetForm({});
+
             })
-           
-       }
-    
 
-render() {
-              
-    createAlert = () =>
-    
-        Alert.alert(
-                "Te informamos",
-                "Que tu registro fue enviado",
-                [
-                {
-                    text: "Cancel",
-                    onPress: () => console.log("Cancel Pressed"),
-                    style: "cancel"
-                },
-                { text: "OK", onPress: () => console.log("OK Pressed") }
-                ],
-                { cancelable: false }
+        },
+        validate: values => {
 
-                /*
-                ingresra en el button
-                onPress={this.createAlert}
-                */
-                
-        );
-    
+            const errors = {};
+            /*
+            if(!values.name || values.name.length < 2 ) errors.name = 'Nombre invalido'
+            if(!values.apellido || values.apellido.length < 2 ) errors.apellido = 'Apellido invalido'
+            if(!values.mail || values.mail.length < 2 ) errors.mail = 'Email invalido'
+            if(!values.tel || values.tel.length < 4 ) errors.tel = 'Telefono invalido'
+            if(!values.mensaje || values.mensaje.length < 4 ) errors.mensaje = 'Mensaje invalido'
+            
+            console.log(values);
+            */
+        }
+    })
 
        return(
               <>
                 <KeyboardAwareScrollView
                    style={{ backgroundColor: '#0064AD' }}
                    resetScrollToCoords={{ x: 0, y: 0 }}
-                  
                    scrollEnabled={false}
                 >
-                <View style={ styles.vreform } onSubmit = {this.handleSubmit}> 
+                <View style={ styles.vreform }> 
                     <View style={ styles.reform }>
-                        <Text style={ styles.header}> 
+                        <Label style={ styles.header}> 
                             Contacta con Nosotros
-                        </Text>
-                        <TextInput style = {styles.textinputF} placeholder='Nombre'
-                                placeholderTextColor = "#fff"
-                                underlineColorAndroid={'transparent'}
-                                onChange= {this.handleChange}
-                        />
-                        <TextInput style = {styles.textinputF} placeholder='Apellido'
-                                placeholderTextColor = "#fff" 
-                                underlineColorAndroid={'transparent'}
-                                onChange= {this.handleChange}
-                        />  
-                        <TextInput  style = {styles.textinputF} placeholder='Email'
-                                keyboardType={'email-address'}
-                                placeholderTextColor = "#fff"
-                                secureTextEntry={false} 
-                                underlineColorAndroid={'transparent'}  
-                                onChange= {this.handleChange}
-                        /> 
-                        <TextInput  style = {styles.textinputF} placeholder='telefono'
-                                keyboardType={'phone-pad'}
-                                placeholderTextColor = "#fff"
-                                secureTextEntry={false}  
-                                underlineColorAndroid={'transparent'}
-                                onChange= {this.handleChange}
-                        /> 
-                         <TextInput  style = {styles.textinputT} placeholder='Mensaje'
-                                multiline={true}
-                                numberOfLines={3}
-                                placeholderTextColor = "#fff"
-                                underlineColorAndroid={'transparent'}
-                                onChange= {this.handleChange}
-                        /> 
-                        <View style={ styles.button }>
-                            <Button color="#C6469A"
-                                title="     Enviar      "
-                                onPress={this.createAlert}
+                        </Label>
+                           <Form>
+                            <Input  style = {styles.textinputF} placeholder='Nombre'
+                                    placeholderTextColor = "#fff"
+                                    underlineColorAndroid={'transparent'}
+                                    value={values.nombre} onChangeText={text => setFieldValue('nombre', text)}
+                                   
                             />
-                        </View> 
+                            <Input  style = {styles.textinputF} placeholder='Apellido'
+                                    placeholderTextColor = "#fff" 
+                                    underlineColorAndroid={'transparent'}
+                                    value={values.apellido} onChangeText={text => setFieldValue('apellido', text)}
+                                    
+                            />  
+                            <Input  style = {styles.textinputF} placeholder='Email'
+                                    keyboardType={'email-address'}
+                                    placeholderTextColor = "#fff"
+                                    secureTextEntry={false} 
+                                    underlineColorAndroid={'transparent'}  
+                                    value={values.mail} onChangeText={text => setFieldValue('mail', text)}
+                                   
+                            /> 
+                            <Input  style = {styles.textinputF} placeholder='telefono'
+                                    keyboardType={'phone-pad'}
+                                    placeholderTextColor = "#fff"
+                                    secureTextEntry={false}  
+                                    underlineColorAndroid={'transparent'}
+                                    value={values.tel} onChangeText={text => setFieldValue('tel', text)}
+                                   
+                            /> 
+                            <Input  style = {styles.textinputT} placeholder='Mensaje'
+                                    multiline={true}
+                                    numberOfLines={3}
+                                    placeholderTextColor = "#fff"
+                                    underlineColorAndroid={'transparent'}
+                                    value={values.mensaje} onChangeText={text => setFieldValue('mensaje', text)}
+                                    
+                            /> 
+                            <View style={ styles.button }>
+                                <Button color="#C6469A"
+                                    title="     Enviar      "
+                                    onPress={handleSubmit}
+                                />
+                            </View> 
+                        </Form>
                     </View>
                   </View>
                   </KeyboardAwareScrollView>
-              </>
+            </>
        );
   }
-}
-
-export default form;
 
 const styles = StyleSheet.create({
     vreform: {
@@ -212,3 +197,6 @@ const styles = StyleSheet.create({
         backgroundColor : '#C6469A'
     }
 });
+
+     
+   

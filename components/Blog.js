@@ -50,8 +50,8 @@ function Blog(props) {
 					title={item.title}
 					>
 				    <Image
-						source={ item.enclosures.url }
-						style={{  width: 400, height: 400 }}
+						source={{ uri: item.enclosures[0].url }}
+						style={{  width: '100%', height: 150 }}
                     />
 					<Text style={{marginBottom: 10}}>
 						  {item.description}
