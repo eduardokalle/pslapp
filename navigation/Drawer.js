@@ -76,7 +76,7 @@ const DrawerContent = props => {
             Protejo
           </Text>
           <Text white size={9}>
-            Mas cerca de ti
+            Más cerca de ti
           </Text>
         </Block>
         <Block>
@@ -102,7 +102,7 @@ const DrawerContent = props => {
             icon={() => <AntDesign name="calendar" color="white" size={16} />}
           />
            <DrawerItem
-            label="Quienes Somos"
+            label="Quiénes Somos"
             labelStyle={{ color: 'white', marginLeft: -16 }}
             style={{ alignItems: 'flex-start', marginVertical: 0 }}
             onPress={() => props.navigation.navigate('AboutUs')}
@@ -137,7 +137,7 @@ const DrawerContent = props => {
             icon={() => <AntDesign name="book" color="white" size={16} />}
           />
             <DrawerItem
-            label="Contactanos"
+            label="Contáctanos"
             labelStyle={{ color: 'white', marginLeft: -16 }}
             style={{ alignItems: 'flex-start', marginVertical: 0 }}
             onPress={() => props.navigation.navigate('Contact')}

@@ -20,16 +20,16 @@ export default function Home() {
 				<View style={styles.vwBtns}>		
 					<View style={styles.vbtn}>	
 					    <Icon.Button style={styles.vbtnPhone}  name="phone" onPress={() => {
-						          	Linking.openURL(`tel:${+573124796067}`);
+						          	Linking.openURL(`tel:${+573105395410}`);
 						       	}} solid>
-							          Llamanos   
+							          Llámanos   
 						</Icon.Button>	
 					</View>	
 					<View style={styles.vbtn}>	
 						<Icon.Button style={styles.vbtnPhone}  name="whatsapp" onPress={() => {	
-							Linking.openURL('https://wa.me/573124796067');	
+							Linking.openURL('https://wa.me/573105395410');	
 							}} solid>	
-							Contactanos 	
+							Contáctanos 	
 						</Icon.Button>  	
 					</View>
 				</View>

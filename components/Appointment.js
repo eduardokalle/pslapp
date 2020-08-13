@@ -21,7 +21,7 @@ function appointment(props) {
                 <View style={styles.following}>
                   <View style={styles.vbtn}> 
                     <Icon.Button style={styles.vbtnPhone}  name="whatsapp" onPress={() => {
-						          	Linking.openURL('https://wa.me/573124796067');
+						          	Linking.openURL('https://wa.me/573105395410');
 						       	}} solid>
 							          Whatsapp 
 						        </Icon.Button>

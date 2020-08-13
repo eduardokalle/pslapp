@@ -33,7 +33,7 @@ function Services(props) {
                 >
                 <View style={styles.rect8Filler}></View>
                 <View style={styles.rect8}>
-                    <Text style={styles.text22}>Odontologia</Text>
+                    <Text style={styles.text22}>Odontología</Text>
                 </View>
                 </ImageBackground>
             </TouchableOpacity>
@@ -46,7 +46,7 @@ function Services(props) {
                     style={styles.image2}
                 ></Image>
                 <View style={styles.rect82}>
-                    <Text style={styles.text23}>Pediatria</Text>
+                    <Text style={styles.text23}>Pediatría</Text>
                 </View>
                 </View>
             </TouchableOpacity>
@@ -92,7 +92,7 @@ function Services(props) {
             >
                 <View style={styles.rect85Filler}></View>
                 <View style={styles.rect85}>
-                <Text style={styles.text26}>Psicologia</Text>
+                <Text style={styles.text26}>Psicología</Text>
                 </View>
             </ImageBackground>
             </TouchableOpacity>
@@ -106,7 +106,7 @@ function Services(props) {
             >
                 <View style={styles.rect86Filler}></View>
                 <View style={styles.rect86}>
-                <Text style={styles.text27}>Enfermeria</Text>
+                <Text style={styles.text27}>Enfermería</Text>
                 </View>
             </ImageBackground>
             </TouchableOpacity>

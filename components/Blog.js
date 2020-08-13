@@ -20,7 +20,7 @@ function Blog(props) {
 		.then((rss) => {
 			setData(rss);
 			setLoading(false);
-			console.log(rss.items[0].enclosures[0].url)
+			//console.log(rss.items[0].enclosures[0].url)
 		});
 		
 	}, []);

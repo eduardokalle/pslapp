@@ -24,7 +24,7 @@ const Social = () => {
                         color='#000000'
                         backgroundColor= "#fff"
                         name="facebook" onPress={() => {
-							Linking.openURL('https://www.facebook.com');
+							Linking.openURL('https://www.facebook.com/protejoenlinea/');
 							}} solid>
                                 
                         </Icon.Button>
@@ -34,7 +34,7 @@ const Social = () => {
                         color='#000000'
                         backgroundColor= "#fff"
                         name="instagram" onPress={() => {
-							Linking.openURL('https://www.facebook.com');
+							Linking.openURL('https://www.instagram.com/protejoenlinea/');
 							}} solid>
                                 
                         </Icon.Button>
@@ -44,7 +44,7 @@ const Social = () => {
                         color='#000000'
                         backgroundColor= "#fff"
                         name="twitter" onPress={() => {
-							Linking.openURL('https://www.facebook.com');
+							Linking.openURL('https://twitter.com/');
 							}} solid>
                                 
                         </Icon.Button>
