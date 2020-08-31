@@ -92,7 +92,7 @@ const DrawerContent = props => {
             labelStyle={{ color: 'white', marginLeft: -16 }}
             style={{ alignItems: 'flex-start', marginVertical: 0 }}
             onPress={() => props.navigation.navigate('Services')}
-            icon={() => <AntDesign name="message1" color="white" size={16} />}
+            icon={() => <AntDesign name="hearto" color="white" size={16} />}
           />
           <DrawerItem
             label="Tu Cita"
@@ -141,7 +141,7 @@ const DrawerContent = props => {
             labelStyle={{ color: 'white', marginLeft: -16 }}
             style={{ alignItems: 'flex-start', marginVertical: 0 }}
             onPress={() => props.navigation.navigate('Contact')}
-            icon={() => <AntDesign name="phone" color="white" size={16} />}
+            icon={() => <AntDesign name="mail" color="white" size={16} />}
           />
         </Block>
       </Block>

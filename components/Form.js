@@ -1,7 +1,7 @@
 import * as React from 'react';
 import axios from 'axios';
 
-import {Form, Item, Input, View, Label } from 'native-base'
+import {Form, Input, View, Label } from 'native-base'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import { useFormik } from 'formik';
 
@@ -23,7 +23,8 @@ export default function form() {
 
             const { nombre , apellido , tel , mail , mensaje } = values;
 
-         axios.post('http://192.168.1.23:4500/sendMail' , {
+         //axios.post('http://192.168.1.23:4500/sendMail' , {
+           axios.post('https://protejo-back.herokuapp.com/sendmail', {
               nombre,
               apellido,
               tel,

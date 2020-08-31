@@ -46,7 +46,7 @@ function Services(props) {
                     style={styles.image2}
                 ></Image>
                 <View style={styles.rect82}>
-                    <Text style={styles.text23}>Pediatría</Text>
+                    <Text style={styles.text23}>Especialistas</Text>
                 </View>
                 </View>
             </TouchableOpacity>
@@ -75,7 +75,7 @@ function Services(props) {
                 >
                 <View style={styles.rect84Filler}></View>
                 <View style={styles.rect84}>
-                    <Text style={styles.text25}>Medicina G</Text>
+                    <Text style={styles.text25}>Medicina General</Text>
                 </View>
                 </ImageBackground>
             </TouchableOpacity>

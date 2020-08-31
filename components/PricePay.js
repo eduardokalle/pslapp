@@ -1,33 +1,21 @@
 import React, { Component } from "react";
-import { StyleSheet, View, ImageBackground, Text, Button, Linking, ScrollView  } from "react-native";
+import { StyleSheet, View, ImageBackground, Text, Linking } from "react-native";
 import Icon from 'react-native-vector-icons/FontAwesome5';
-import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
+import { DataTable, Button  } from 'react-native-paper';
 import Social from './Social';
+import { WebView } from 'react-native-webview';
+
+
 
 function PricePay (props) {
-   
-   const TablePrice = {
-    tableHead: ['', 'Tipo Pago ', 'Tiempo', 'Precio'],
-    tableTitle: ['Medicia G', 'Enfermeria', 'Pediatria', 'Odontologia','Fisioterapia','Psicologia'],
-    tableData: [
-      ['*************', '*****', '*****'],
-      ['*************', '*****', '*****'],
-      ['*************', '*****', '*****'],
-      ['*************', '*****', '*****'],
-      ['*************', '*****', '*****'],
-      ['*************', '*****', '*****']
-    ]
-  }
-   
- 
-  
+
+
   return (
-       
-   
+
       <>
         <View style={styles.vheader}>
         </View>
-          <Social/>  
+          <Social/>
         <View style={styles.container}>
           <ImageBackground
               source={require("../assets/images/Payment.png")}
@@ -38,33 +26,65 @@ function PricePay (props) {
               <View style={styles.overlay}>
               <Text style={styles.scienceChannel}>Precios y Pagos </Text>
               <View style={styles.following}>
-                <View style={styles.vbtn}> 
-                  <Icon.Button style={styles.vbtnPhone}  name="cc-mastercard" onPress={() => {
-                                            Linking.openURL('');
-                                        }} solid>
-                        Pagos en linea 
-                  </Icon.Button>
-                </View> 
+
               </View>
               <Text style={styles.followers}>Conectamos posibilidades para cumplir sueños</Text>
               </View>
           </ImageBackground>
         </View>
-        <ScrollView horizontal={true}>
-        <View style={styles.table}>
-            <View style={styles.containerTable}>
-              <Table borderStyle={{borderWidth: 1}}>
-                <Row data={TablePrice.tableHead} flexArr={[1, 1, 1, 1]} style={styles.headTable} textStyle={styles.textTable}/>
-                <TableWrapper style={styles.wrapperTable}>
-                  <Col data={TablePrice.tableTitle} style={styles.titleTable} heightArr={[45,45]} textStyle={styles.textTable}/>
-                  <Rows data={TablePrice.tableData} flexArr={[1, 1, 1]} style={styles.rowTable} textStyle={styles.textTable}/>
-                </TableWrapper>
-              </Table>
-          </View>
+        <View>
+        <WebView source={{ uri: '../shared/button1.js' }}/>
         </View>
-        </ScrollView>
+        <DataTable>
+            <DataTable.Header>
+              <DataTable.Title>Área</DataTable.Title>
+              <DataTable.Title >Tipo</DataTable.Title>
+              <DataTable.Title >Precio</DataTable.Title>
+              <DataTable.Title >pago</DataTable.Title>
+            </DataTable.Header>
 
-      </>    
+            <DataTable.Row>
+              <DataTable.Cell>Psicología</DataTable.Cell>
+              <DataTable.Cell>Básico</DataTable.Cell>
+              <DataTable.Cell >120,000 </DataTable.Cell>
+              <View>
+                <Icon.Button style={styles.vbtnPay}  name="shopping-cart" onPress={() => {
+                  Linking.openURL('https://payco.link/570664');
+                  }} solid>
+                  Pago
+                </Icon.Button>
+				    	</View>
+            </DataTable.Row>
+
+            <DataTable.Row>
+             <DataTable.Cell>Medicina G</DataTable.Cell>
+              <DataTable.Cell>Básico</DataTable.Cell>
+              <DataTable.Cell>Desde 35,000</DataTable.Cell>
+              <View>
+                <Icon.Button style={styles.vbtnPay}  name="shopping-cart" onPress={() => {
+                  Linking.openURL('https://payco.link/538146');
+                  }} solid>
+                  Pago
+                </Icon.Button>
+				    	</View>
+            </DataTable.Row>
+
+            <DataTable.Row>
+             <DataTable.Cell>Especialistas</DataTable.Cell>
+              <DataTable.Cell>Básico</DataTable.Cell>
+              <DataTable.Cell>Desde 80,000</DataTable.Cell>
+              <View>
+                <Icon.Button style={styles.vbtnPay}  name="shopping-cart" onPress={() => {
+                  Linking.openURL('https://payco.link/570669');
+                  }} solid>
+                  Pago
+                </Icon.Button>
+				    	</View>
+            </DataTable.Row>
+
+        </DataTable>
+
+      </>
 );
 }
 
@@ -95,10 +115,10 @@ following: {
   position: 'relative',
   bottom: -20,
 },
-space: { 
+space: {
   height: 30,
   backgroundColor: "#fff",
-  
+
   },
 text: {
   color: "rgba(31,178,204,1)",
@@ -120,43 +140,27 @@ vheader : {
   paddingLeft: 0,
   paddingRight:0,
   //borderColor: 'red'
-},  
+},
 vbtn: {
   marginRight: 10,
 },
 table: {
   width: 400,
-  height: 400, 
+  height: 400,
+},
+cellp: {
+  width: 200,
+
 },
 
-// Style Table 
+// Style button
 
-containerTable: { 
-  flex: 1, 
-  padding: 11, 
-  paddingTop: 28, 
-  backgroundColor: '#fff' 
-},
-headTable: {  
-  height: 40,  
-  backgroundColor: '#f1f8ff'  
-},
-wrapperTable: { 
-  flexDirection: 'row' 
-},
-titleTable: { 
-  backgroundColor: '#f6f8fa' 
-},
-rowTable: {  
-  height: 45  
-},
-textTable: { 
-  textAlign: 'center'
-},
 vbtnPhone: {
   backgroundColor : '#C6469A'
 },
-dataWrapper: { marginTop: -1 }
+vbtnPay: {
+  backgroundColor : '#C6469A'
+}
 
 
 });
